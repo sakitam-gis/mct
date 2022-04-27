@@ -1,0 +1,10 @@
+.idea/
+.vscode/
+node_modules/
+
+ts/node_modules
+ts/dist
+ts/coverage
+
+*.log
+.cache
