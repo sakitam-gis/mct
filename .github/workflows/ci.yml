@@ -1,10 +1,14 @@
-name: CI
+name: TS CI
 
 on:
   push:
     branches: [master, dev]
+    paths:
+      - 'ts/**'
   pull_request:
     branches: [master, dev]
+    paths:
+      - 'ts/**'
 
 jobs:
   test:
@@ -37,6 +41,10 @@ jobs:
             ${{ runner.os }}-${{ matrix.node-version }}-test-${{ env.cache-name }}-
             ${{ runner.os }}-${{ matrix.node-version }}-test-
             ${{ runner.os }}-
+
+      - name: CD path
+        run: cd ts
+
       - name: Install pnpm
         run: npm i -g pnpm
 
@@ -67,6 +75,7 @@ jobs:
             ${{ runner.os }}-${{ matrix.node-version }}-release-${{ env.cache-name }}-
             ${{ runner.os }}-${{ matrix.node-version }}-release-
             ${{ runner.os }}-
+      - run: cd ts
       - run: npm i -g pnpm
       - run: pnpm i
       - run: pnpm semantic-release
