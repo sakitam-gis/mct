@@ -1,6 +1,8 @@
 package com.sakitam.mercantile;
 
-public class BBox {
+import java.io.Serializable;
+
+public class BBox implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private double left;
@@ -57,9 +59,9 @@ public class BBox {
             return true;
         }
 
-        return Double.compare(o.getTop(), this.getTop()) == 0
-                && Double.compare(o.getBottom(), this.getBottom()) == 0
-                && Double.compare(o.getLeft(), this.getLeft()) == 0
-                && Double.compare(o.getRight(), this.getRight()) == 0;
+        return Constant.closeTo(o.getTop(), this.getTop())
+                && Constant.closeTo(o.getBottom(), this.getBottom())
+                && Constant.closeTo(o.getLeft(), this.getLeft())
+                && Constant.closeTo(o.getRight(), this.getRight());
     }
 }

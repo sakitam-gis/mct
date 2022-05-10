@@ -1,6 +1,8 @@
 package com.sakitam.mercantile;
 
-public class LngLatBBox {
+import java.io.Serializable;
+
+public class LngLatBBox implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private double west;
@@ -58,9 +60,9 @@ public class LngLatBBox {
             return true;
         }
 
-        return Double.compare(o.getEast(), this.getEast()) == 0
-                && Double.compare(o.getNorth(), this.getNorth()) == 0
-                && Double.compare(o.getWest(), this.getWest()) == 0
-                && Double.compare(o.getSouth(), this.getSouth()) == 0;
+        return Constant.closeTo(o.getEast(), this.getEast())
+                && Constant.closeTo(o.getNorth(), this.getNorth())
+                && Constant.closeTo(o.getWest(), this.getWest())
+                && Constant.closeTo(o.getSouth(), this.getSouth());
     }
 }

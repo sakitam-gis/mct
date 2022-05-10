@@ -57,4 +57,12 @@ public class Mercator implements Serializable {
 	public static LngLat toLngLat(Mercator xy, boolean clip) {
 		return new LngLat(xy.getLng(), xy.getLat(), clip);
 	}
+
+	public boolean equals(Mercator m) {
+		if (m == this) {
+			return true;
+		}
+
+		return Constant.closeTo(this.getX(), m.getX()) && Constant.closeTo(this.getY(), m.getY());
+	}
 }

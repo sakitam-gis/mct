@@ -1,19 +1,13 @@
 package com.sakitam.mercantile;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Mercantile {
+public class Mercantile implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     public Mercantile() {
         super();
-    }
-
-    public static Integer[] minmax(int zoom) {
-        if (zoom < 0) {
-            throw new Error("zoom must be a positive integer");
-        } else {
-            int max = (int) Math.pow(zoom, 2);
-            return new Integer[]{0, max};
-        }
     }
 
     public static LngLatBBox bounds(Tile t) {

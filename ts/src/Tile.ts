@@ -45,7 +45,7 @@ export default class Tile {
     const z = this.getZoom();
     const x = this.getX();
     const y = this.getY();
-    return this.getZoom() >= 0 && 0 <= x && x <= 2 ** z - 1 && 0 <= y && y <= 2 ** z - 1;
+    return z >= 0 && 0 <= x && x <= 2 ** z - 1 && 0 <= y && y <= 2 ** z - 1;
   }
 
   public parent(zoom?: number): Tile | null {

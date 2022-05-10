@@ -7,6 +7,8 @@ ts/dist
 ts/coverage
 
 java/.gradle
+java/build
+java/out
 
 **/target/
 **/.idea/

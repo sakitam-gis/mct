@@ -97,7 +97,7 @@ public class LngLat implements Serializable {
 			return true;
 		}
 
-		return Double.compare(o.getLng(), this.getLng()) == 0
-				&& Double.compare(o.getLat(), this.getLat()) == 0;
+		return Constant.closeTo(o.getLng(), this.getLng())
+				&& Constant.closeTo(o.getLat(), this.getLat());
 	}
 }
