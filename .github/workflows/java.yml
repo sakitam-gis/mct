@@ -36,5 +36,6 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: publish
+          build-root-directory: ${{ env.WORKER_DIR }}
         env:
           GITHUB_TOKEN: ${{ secrets.PKG_DEPLOY_TOKEN }}
