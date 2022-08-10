@@ -1,4 +1,8 @@
 name: JAVA CI
+
+env:
+  WORKER_DIR: java
+
 on:
   push:
     branches: [master, dev]
@@ -8,6 +12,10 @@ on:
     branches: [master, dev]
     paths:
       - 'java/**'
+
+defaults:
+  run:
+    working-directory: java
 
 jobs:
   publish:
@@ -23,12 +31,10 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+        uses: gradle/wrapper-validation-action@v1
       - name: Publish package
-        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: publish
         env:
-          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PKG_DEPLOY_TOKEN }}

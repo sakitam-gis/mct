@@ -1,25 +1,26 @@
-buildscript {
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'org.sakitam'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/sakitam-gis/mercantile"
+            url = "https://maven.pkg.github.com/sakitam-gis/mct"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
-}
-
-plugins {
-    id 'java'
-}
-
-group 'org.sakitam-gis'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
