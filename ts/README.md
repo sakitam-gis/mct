@@ -1,6 +1,6 @@
 ## Mercantile for TS
 
-[![CI](https://github.com/sakitam-gis/mct/actions/workflows/ts.yml/badge.svg)](https://github.com/sakitam-gis/mct/actions/workflows/ts.yml) [![npm version](https://badgen.net/npm/v/@sakitam-gis/mercantile)](https://npm.im/@sakitam-gis/mercantile) [![npm downloads](https://badgen.net/npm/dm/@sakitam-gis/mercantile)](https://npm.im/@sakitam-gis/mercantile) [![Coverage Status](https://coveralls.io/repos/github/sakitam-gis/mercantile/badge.svg?branch=master)](https://coveralls.io/github/sakitam-gis/mercantile?branch=master)
+[![CI](https://github.com/sakitam-gis/mct/actions/workflows/ts.yml/badge.svg)](https://github.com/sakitam-gis/mct/actions/workflows/ts.yml) [![npm version](https://badgen.net/npm/v/@sakitam-gis/mercantile)](https://npm.im/@sakitam-gis/mercantile) [![npm downloads](https://badgen.net/npm/dm/@sakitam-gis/mercantile)](https://npm.im/@sakitam-gis/mercantile) [![Coverage Status](https://coveralls.io/repos/github/sakitam-gis/mct/badge.svg?branch=master)](https://coveralls.io/github/sakitam-gis/mct?branch=master)
 
 Spherical mercator coordinate and tile utilities
 
