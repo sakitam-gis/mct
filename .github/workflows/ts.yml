@@ -8,12 +8,12 @@ on:
     branches: [master, dev]
     paths:
       - 'ts/**'
-      - './github/workflows/ts.yml'
+      - '.github/workflows/ts.yml'
   pull_request:
     branches: [master, dev]
     paths:
       - 'ts/**'
-      - './github/workflows/ts.yml'
+      - '.github/workflows/ts.yml'
 
 defaults:
   run:
