@@ -182,6 +182,7 @@ public class Tile implements Serializable {
 
 	/**
 	 * 返回瓦片左上角的经度和纬度
+	 * @return LngLat
 	 */
 	public LngLat ul() {
 		double Z2 = Math.pow(2, this.getZoom());
@@ -193,6 +194,7 @@ public class Tile implements Serializable {
 
 	/**
 	 * 返回瓦片右下角的经度和纬度
+	 * @return LngLat
 	 */
 	public LngLat lr() {
 		double Z2 = Math.pow(2, this.getZoom());

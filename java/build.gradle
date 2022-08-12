@@ -11,6 +11,16 @@ repositories {
 }
 
 publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.sakitam'
+            artifactId = 'mercantile'
+            version = '1.0-SNAPSHOT'
+
+            from components.java
+        }
+    }
+
     repositories {
         maven {
             name = "GitHubPackages"

@@ -72,13 +72,13 @@ public class Mercantile implements Serializable {
 
     /**
      * 根据范围生成瓦片
-     * @param west
-     * @param south
-     * @param east
-     * @param north
-     * @param zooms TODO 注意此处有可能只传单个 zoom, 类型为 int，需要重载
-     * @param clip
-     * @return
+     * @param west bbox left
+     * @param south bbox bottom
+     * @param east bbox right
+     * @param north bbox top
+     * @param zooms zoom
+     * @param clip clip lnglat
+     * @return tile list
      */
     public static ArrayList<Tile> tiles(double west, double south, double east, double north, int[] zooms, boolean clip) {
         LngLat ws = new LngLat(west, south, clip);
